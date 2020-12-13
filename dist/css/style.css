@@ -197,7 +197,7 @@ a {
     font-family: "Grobold";
     font-size: 60px;
     color: #febb01;
-    text-shadow: -13px 13px 0 #0039d8;
+    text-shadow: -9px 9px 0 #0039d8;
     line-height: 1;
     margin-bottom: 25px;
     position: relative; }
@@ -274,7 +274,8 @@ a {
     .welcome_content {
       max-width: 450px; }
     .welcome_title {
-      font-size: 45px; }
+      font-size: 45px;
+      text-shadow: -7px 7px 0 #0039d8; }
     .welcome_title-big {
       font-size: 90px; }
     .welcome_text {
@@ -316,7 +317,8 @@ a {
     .welcome_content {
       margin-bottom: 90%; }
     .welcome_title {
-      font-size: 28px; }
+      font-size: 28px;
+      text-shadow: -5px 5px 0 #0039d8; }
     .welcome_title-big {
       font-size: 50px; }
     .welcome_text {
