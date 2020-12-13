@@ -293,9 +293,9 @@ a {
       margin-right: 0; } }
   @media (max-width: 769px) {
     .welcome {
-      background-image: url(../img/snow.png), -webkit-gradient(linear, left top, left bottom, color-stop(20%, #025fea), color-stop(80%, #4ad4fd), color-stop(80%, #fff));
-      background-image: url(../img/snow.png), -o-linear-gradient(top, #025fea 20%, #4ad4fd 80%, #fff 80%);
-      background-image: url(../img/snow.png), linear-gradient(to bottom, #025fea 20%, #4ad4fd 80%, #fff 80%);
+      background-image: url(../img/snow.png), -webkit-gradient(linear, left top, left bottom, color-stop(20%, #025fea), color-stop(80%, #4ad4fd), color-stop(80%, #e9f3f6));
+      background-image: url(../img/snow.png), -o-linear-gradient(top, #025fea 20%, #4ad4fd 80%, #e9f3f6 80%);
+      background-image: url(../img/snow.png), linear-gradient(to bottom, #025fea 20%, #4ad4fd 80%, #e9f3f6 80%);
       background-size: 200%, cover;
       background-position: bottom 20% center;
       padding-top: 95px; }
