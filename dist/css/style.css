@@ -187,6 +187,7 @@ a {
     justify-content: flex-end; }
   .welcome_content {
     max-width: 600px;
+    margin-right: 50px;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 18px;
@@ -376,7 +377,7 @@ a {
       font-size: 69px;
       margin-right: 15px; }
     .steps_content {
-      font-size: 19px; } }
+      font-size: 22px; } }
   @media (max-width: 769px) {
     .steps {
       -ms-flex-wrap: wrap;
@@ -386,16 +387,16 @@ a {
       .steps_item {
         width: 100%;
         border-radius: 60px 0 0 60px;
-        padding: 10px 10px 10px 24px; }
+        padding: 10px 5px 10px 15px; }
       .steps_num {
         margin-right: 10px; } }
   @media (max-width: 500px) {
     .steps_num {
       font-size: 40px; }
     .steps_title {
-      font-size: 17px; }
+      font-size: 20px; }
     .steps_text {
-      font-size: 12px; } }
+      font-size: 13px; } }
 
 .icons {
   background-color: #fff; }
