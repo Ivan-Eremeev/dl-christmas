@@ -122,10 +122,7 @@ h1, h2, h3 {
   flex-direction: column;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #025fea), to(#4ad4fd));
-  background-image: -o-linear-gradient(top, #025fea 30%, #4ad4fd);
-  background-image: linear-gradient(to bottom, #025fea 30%, #4ad4fd); }
+  justify-content: space-between; }
   @media (max-width: 769px) {
     .page {
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #025fea), color-stop(70%, #4ad4fd), color-stop(70%, #fff));
@@ -167,9 +164,11 @@ a {
   -ms-flex-positive: 1;
   flex-grow: 1;
   padding-top: 45px;
-  background-image: url(../img/snow.png);
-  background-size: 100%, auto;
-  background-position: bottom -100px center;
+  background-image: url(../img/snow.png), -webkit-gradient(linear, left top, left bottom, from(#025fea), color-stop(50%, #4ad4fd));
+  background-image: url(../img/snow.png), -o-linear-gradient(top, #025fea, #4ad4fd 50%);
+  background-image: url(../img/snow.png), linear-gradient(to bottom, #025fea, #4ad4fd 50%);
+  background-size: cover;
+  background-position: top 100px center, center;
   background-repeat: no-repeat; }
   .welcome > .wrapper {
     width: 100%;
@@ -267,9 +266,6 @@ a {
       -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
       transform: translate(0, 0); }
-  @media (max-width: 1920px) {
-    .welcome {
-      background-position: bottom center; } }
   @media (max-width: 1600px) {
     .welcome > .wrapper {
       background-position: top left; } }
@@ -291,15 +287,16 @@ a {
     .welcome_btn {
       font-size: 50px; } }
   @media (max-width: 1050px) {
-    .welcome {
-      background-size: 200%; }
-      .welcome > .wrapper {
-        background-position: top left -300px; }
-      .welcome_content {
-        margin-right: 0; } }
+    .welcome > .wrapper {
+      background-position: top left -300px; }
+    .welcome_content {
+      margin-right: 0; } }
   @media (max-width: 769px) {
     .welcome {
-      background-size: 300%;
+      background-image: url(../img/snow.png), -webkit-gradient(linear, left top, left bottom, color-stop(20%, #025fea), color-stop(80%, #4ad4fd), color-stop(80%, #fff));
+      background-image: url(../img/snow.png), -o-linear-gradient(top, #025fea 20%, #4ad4fd 80%, #fff 80%);
+      background-image: url(../img/snow.png), linear-gradient(to bottom, #025fea 20%, #4ad4fd 80%, #fff 80%);
+      background-size: 200%, cover;
       background-position: bottom 20% center;
       padding-top: 95px; }
       .welcome > .wrapper {
@@ -331,7 +328,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 35px;
+  padding-right: 55px;
   overflow: hidden; }
   .steps_item {
     display: -webkit-box;
@@ -360,7 +357,7 @@ a {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 100%; }
+    left: calc(100% - 1px); }
     .steps_triangle img {
       height: 100%; }
   .steps_num {
@@ -466,8 +463,10 @@ a {
       font-size: 11px; } }
 
 /* settings */
-html.lock {
-  overflow: hidden; }
+html {
+  height: 100%; }
+  html.lock {
+    overflow: hidden; }
 
 a {
   -webkit-transition: .1s;
@@ -482,6 +481,7 @@ textarea {
   font-size: 16px; }
 
 body {
+  height: 100%;
   min-width: 319px;
   background-color: #fff;
   font-family: "RobotoCondensed", sans-serif;

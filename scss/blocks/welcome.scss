@@ -3,9 +3,10 @@
   align-items: center;
   flex-grow: 1;
   padding-top: 45px;
-  background-image: url(../img/snow.png);
-  background-size: 100%, auto;
-  background-position: bottom -100px center;
+  background-image: url(../img/snow.png),
+  linear-gradient(to bottom, #025fea, #4ad4fd 50%);
+  background-size: cover;
+  background-position: top 100px center, center;
   background-repeat: no-repeat;
   >.wrapper {
     width: 100%;
@@ -100,7 +101,6 @@
     }
   }
   @media (max-width: 1920px) {
-    background-position: bottom center;
   }
   @media (max-width: 1600px) {
     >.wrapper {
@@ -136,7 +136,6 @@
     }
   }
   @media (max-width: $break_md) {
-    background-size: 200%;
     >.wrapper {
       background-position: top left -300px;
     }
@@ -145,7 +144,9 @@
     }
   }
   @media (max-width: $break_sm) {
-    background-size: 300%;
+    background-image: url(../img/snow.png),
+    linear-gradient(to bottom, #025fea 20%, #4ad4fd 80%, #fff 80%);
+    background-size: 200%, cover ;
     background-position: bottom 20% center;
     padding-top: 95px;
     >.wrapper {

@@ -1,6 +1,6 @@
 .steps {
   display: flex;
-  padding-right: 35px;
+  padding-right: 55px;
   overflow: hidden;
   &_item {
     display: flex;
@@ -29,7 +29,7 @@
     height: 100%;
     position: absolute;
     top: 0;
-    left: 100%;
+    left: calc(100% - 1px);
     img {
       height: 100%;
     }
