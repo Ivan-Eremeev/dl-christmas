@@ -4,6 +4,9 @@
   flex-direction: column;
   justify-content: space-between;
   background-image: linear-gradient(to bottom, #025fea 30%, #4ad4fd);
+  @media (max-width: $break_sm) {
+    background-image: linear-gradient(to bottom, #025fea 30%, #4ad4fd 70%, #fff 70%);
+  }
 }
 
 .header {
@@ -11,11 +14,13 @@
   padding: 46px 0 0;
   position: absolute;
   @media (max-width: $break_xl) {
-    padding: 20px 0 20px;
+    padding: 20px 0;
   }
 
   @media (max-width: $break_sm) {
-    margin-bottom: 0;
+    max-width: 600px;
+    left: 50%;
+    transform: translate(-50%,0);
   }
 }
 

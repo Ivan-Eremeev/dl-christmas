@@ -126,6 +126,11 @@ h1, h2, h3 {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #025fea), to(#4ad4fd));
   background-image: -o-linear-gradient(top, #025fea 30%, #4ad4fd);
   background-image: linear-gradient(to bottom, #025fea 30%, #4ad4fd); }
+  @media (max-width: 769px) {
+    .page {
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #025fea), color-stop(70%, #4ad4fd), color-stop(70%, #fff));
+      background-image: -o-linear-gradient(top, #025fea 30%, #4ad4fd 70%, #fff 70%);
+      background-image: linear-gradient(to bottom, #025fea 30%, #4ad4fd 70%, #fff 70%); } }
 
 .header {
   width: 100%;
@@ -133,10 +138,14 @@ h1, h2, h3 {
   position: absolute; }
   @media (max-width: 1400px) {
     .header {
-      padding: 20px 0 20px; } }
+      padding: 20px 0; } }
   @media (max-width: 769px) {
     .header {
-      margin-bottom: 0; } }
+      max-width: 600px;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0); } }
 
 .logo {
   display: inline-block; }
@@ -265,63 +274,65 @@ a {
     .welcome > .wrapper {
       background-position: top left; } }
   @media (max-width: 1400px) {
+    .welcome_content {
+      max-width: 450px; }
     .welcome_title {
-      margin-bottom: 13px; }
+      font-size: 45px; }
     .welcome_title-big {
-      font-size: 120px;
-      margin-bottom: 10px; }
-    .welcome_title-top {
-      font-size: 90px;
-      margin-bottom: 10px; }
-    .welcome_title-text-a {
-      font-size: 34px;
-      margin-bottom: 5px; }
-    .welcome_title-text-b {
-      font-size: 65px; }
+      font-size: 90px; }
     .welcome_text {
-      font-size: 35px;
-      margin-bottom: 40px; }
+      font-size: 26px;
+      letter-spacing: -1px; }
       .welcome_text span:after {
         width: 62px;
         height: 22px;
         top: 90%;
         left: 14px; }
     .welcome_btn {
-      font-size: 41px;
-      padding: 12px; } }
+      font-size: 50px; } }
   @media (max-width: 1050px) {
-    .welcome_content {
-      margin-right: 0; } }
+    .welcome {
+      background-size: 200%; }
+      .welcome > .wrapper {
+        background-position: top left -300px; }
+      .welcome_content {
+        margin-right: 0; } }
   @media (max-width: 769px) {
-    .welcome > .wrapper {
-      background-position: top 440px center;
-      background-size: contain; }
-    .welcome_row {
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      margin-bottom: 0; }
-    .welcome_content {
-      margin-bottom: 80%; } }
+    .welcome {
+      background-size: 300%;
+      background-position: bottom 20% center;
+      padding-top: 95px; }
+      .welcome > .wrapper {
+        background-position: top 450px center;
+        background-size: contain; }
+      .welcome_row {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-bottom: 0; }
+      .welcome_content {
+        margin-bottom: 80%; } }
   @media (max-width: 500px) {
     .welcome > .wrapper {
-      background-position: top 400px center; }
+      background-position: top 350px center; }
     .welcome_content {
       margin-bottom: 90%; }
+    .welcome_title {
+      font-size: 28px; }
     .welcome_title-big {
-      font-size: 100px; }
-    .welcome_title-top {
-      font-size: 70px; }
-    .welcome_title-text-a {
-      font-size: 30px; }
-    .welcome_title-text-b {
-      font-size: 56px; } }
+      font-size: 50px; }
+    .welcome_text {
+      font-size: 20px; }
+    .welcome_btn {
+      padding: 14px;
+      font-size: 34px; } }
 
 .steps {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 35px; }
+  padding-right: 35px;
+  overflow: hidden; }
   .steps_item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -471,6 +482,7 @@ textarea {
   font-size: 16px; }
 
 body {
+  min-width: 319px;
   background-color: #fff;
   font-family: "RobotoCondensed", sans-serif;
   font-size: 16px; }
@@ -551,5 +563,8 @@ body {
 *::placeholder {
   color: #a9a9a9;
   opacity: 1; }
+
+a {
+  -webkit-tap-highlight-color: transparent; }
 
 /* /settings */
